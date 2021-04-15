@@ -621,3 +621,9 @@ class RecurringArray(Artifact):
 
     def __str__(self) -> str:
         return "\n Recurring instance: {} \n Recurring instance: {} \n Recurring instance: {} \n Recurring instance: {} \n Recurring instance: {}".format(self.rec_1, self.rec_2, self.rec_3, self.rec_4, self.rec_5)
+
+    @property
+    def to_list(self) -> list:
+        array = [self.rec_1, self.rec_2, self.rec_3, self.rec_4, self.rec_5]
+        array = [i for i in array if i != None]
+        return array
